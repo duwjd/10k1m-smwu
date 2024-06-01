@@ -4,15 +4,14 @@
 <head>
     <meta charset="UTF-8">
     <title>회원 가입</title>
-    <link rel="stylesheet" type="text/css" href="<%=request.getContextPath()%>/resources/css/signupForm.css">
-    <script src="<%=request.getContextPath()%>/resources/js/signupForm.js"></script>
+    <link rel="stylesheet" type="text/css" href="<%=request.getContextPath()%>/resources/css/signUpForm.css">
+    <script src="<%=request.getContextPath()%>/resources/js/signUpForm.js"></script>
 </head>
 <body>
     <div class="container">
-        <img src="<%=request.getContextPath()%>/resources/images/drugstore_logo.png" alt="Drugstore Logo" class="logo"
-        width = "150px" height = "auto" style="display: block; margin: 0 auto;">
+        <h1>올리브영 로고</h1>
         <h2>회원 가입</h2>
-        <form id="registerForm" action="register_process.jsp" method="post">
+        <form id="registerForm" action="<%=request.getContextPath()%>/views/member/signUp.jsp" method="post" accept-charset="UTF-8">
             <label for="name">이름:</label>
             <input type="text" id="name" name="name" placeholder="이름을 입력하세요" required>
 
