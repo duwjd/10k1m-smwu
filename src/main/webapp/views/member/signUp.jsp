@@ -1,4 +1,5 @@
-<%@ page language="java" contentType="text/html; charset=UTF-8" pageEncoding="UTF-8" import="java.sql.*, java.util.*, java.io.*"%>
+<%@ page language="java" contentType="text/html; charset=UTF-8"
+	pageEncoding="UTF-8" import="java.sql.*, java.util.*, java.io.*"%>
 <!DOCTYPE html>
 <html lang="ko">
 <head>
@@ -7,7 +8,7 @@
 </head>
 <body>
 
-<%
+	<%
 request.setCharacterEncoding("UTF-8");  // 폼 데이터 인코딩 설정
 
 String propFilePath = application.getRealPath("/WEB-INF/db.properties");
@@ -35,13 +36,6 @@ String phoneNumber = request.getParameter("phone_number");
 String email = request.getParameter("email");
 String message = "";
 
-//값 출력 확인
-System.out.println("Name: " + name);
-System.out.println("Username: " + username);
-System.out.println("Password: " + password);
-System.out.println("Address: " + address);
-System.out.println("Phone Number: " + phoneNumber);
-System.out.println("Email: " + email);
 
 if (name != null && username != null && password != null && address != null && phoneNumber != null && email != null) {
     Connection conn = null;
@@ -75,8 +69,9 @@ if (name != null && username != null && password != null && address != null && p
     }
 }
 %>
-    <h2><%= message %></h2>
-    <a href="<%=request.getContextPath()%>/views/member/signupForm.jsp">다시 시도하기</a>
+	<h2><%= message %></h2>
+	<a href="<%=request.getContextPath()%>/views/member/signupForm.jsp">다시
+		시도하기</a>
 
 </body>
 </html>

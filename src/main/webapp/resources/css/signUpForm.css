@@ -48,3 +48,14 @@ button {
 button:hover {
 	background-color: #45a049;
 }
+
+.error {
+    color: red;
+    font-size: 0.9em;
+    margin-bottom: 15px;
+    display: none;
+}
+
+.input-error {
+    border: 1px solid red;
+}
