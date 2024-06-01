@@ -1,14 +1,6 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"
-	pageEncoding="UTF-8" import="java.sql.*, java.util.*, java.io.*"%>
-<!DOCTYPE html>
-<html lang="ko">
-<head>
-<meta charset="UTF-8">
-<title>회원 가입 처리</title>
-</head>
-<body>
-
-	<%
+    pageEncoding="UTF-8" import="java.sql.*, java.util.*, java.io.*"%>
+<%
 request.setCharacterEncoding("UTF-8");  // 폼 데이터 인코딩 설정
 
 String propFilePath = application.getRealPath("/WEB-INF/db.properties");
@@ -19,7 +11,7 @@ try {
     fis.close();
 } catch (Exception e) {
     e.printStackTrace();
-    out.println("설정 파일 읽기 실패");
+    response.sendRedirect("../views/member/signupForm.jsp?error=설정 파일 읽기 실패");
     return;
 }
 
@@ -35,7 +27,6 @@ String address = request.getParameter("address");
 String phoneNumber = request.getParameter("phone_number");
 String email = request.getParameter("email");
 String message = "";
-
 
 if (name != null && username != null && password != null && address != null && phoneNumber != null && email != null) {
     Connection conn = null;
@@ -67,11 +58,29 @@ if (name != null && username != null && password != null && address != null && p
             e.printStackTrace();
         }
     }
+} else {
+    message = "모든 필드를 입력해야 합니다.";
 }
 %>
-	<h2><%= message %></h2>
-	<a href="<%=request.getContextPath()%>/views/member/signupForm.jsp">다시
-		시도하기</a>
-
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="UTF-8">
+<title>회원 가입 처리</title>
+<script>
+    function showAlertAndRedirect(message, redirectUrl) {
+        alert(message);
+        window.location.href = redirectUrl;
+    }
+</script>
+</head>
+<body>
+    <script>
+        <% if ("회원 가입이 성공적으로 완료되었습니다!".equals(message)) { %>
+            showAlertAndRedirect("<%= message %>", "<%= request.getContextPath() %>/views/main.jsp");
+        <% } else { %>
+            showAlertAndRedirect("<%= message %>", "<%= request.getContextPath() %>/views/member/signupForm.jsp");
+        <% } %>
+    </script>
 </body>
 </html>
