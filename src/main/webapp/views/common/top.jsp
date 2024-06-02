@@ -22,12 +22,12 @@
             <% 
                 }
             %>
-            <span><a href="cart.jsp">장바구니</a></span>
+            <span><a href="<%=request.getContextPath()%>/views/cart/cart.jsp">장바구니</a></span>
             <span><a href="delevery.jsp">주문배송</a></span>        
         </div>
         <div class= "second">
             <div class="logo">
-                <img src="<%=request.getContextPath()%>/resources/images/drugstore_logo.png" alt="올리브영 로고">
+                <img src="<%=request.getContextPath()%>/resources/images/logo.png" alt="올리브영 로고">
             </div>
             <div class="search">
                 <form class="d-flex" role="search">
