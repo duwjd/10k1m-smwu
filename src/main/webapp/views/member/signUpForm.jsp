@@ -13,7 +13,7 @@
 </head>
 <body>
     <div class="container">
-        <img src="<%=request.getContextPath()%>/resources/images/drugstore_logo.png" alt="Drugstore Logo" class="logo"
+        <img src="<%=request.getContextPath()%>/resources/images/logo.png" alt="Drugstore Logo" class="logo"
         width = "150px" height = "auto" style="display: block; margin: 0 auto;">
         <h2>회원가입</h2>
         <form id="signUpForm" action="<%=request.getContextPath()%>/views/member/signUp.jsp" method="post" accept-charset="UTF-8">
