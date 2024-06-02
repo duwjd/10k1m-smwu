@@ -2,7 +2,7 @@
 <html>
 <head>
 <meta charset="UTF-8">
-<link href="top.css" rel="stylesheet" type="text/css">
+<link href="<%=request.getContextPath()%>/resources/css/top.css" rel="stylesheet" type="text/css">
 <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@100;300;400;500;700;900&display=swap" rel="stylesheet">
 </head>
 <body>
@@ -15,7 +15,7 @@
         </div>
         <div class= "second">
             <div class="logo">
-                <img src="logo.png" alt="올리브영 로고">
+                <img src="<%=request.getContextPath()%>/resources/images/drugstore_logo.png" alt="올리브영 로고">
             </div>
             <div class="search">
                 <form class="d-flex" role="search">
