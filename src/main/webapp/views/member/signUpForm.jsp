@@ -15,7 +15,7 @@
     <div class="container">
         <img src="<%=request.getContextPath()%>/resources/images/drugstore_logo.png" alt="Drugstore Logo" class="logo"
         width = "150px" height = "auto" style="display: block; margin: 0 auto;">
-        <h2>회원 가입</h2>
+        <h2>회원가입</h2>
         <form id="signUpForm" action="<%=request.getContextPath()%>/views/member/signUp.jsp" method="post" accept-charset="UTF-8">
             <label for="name">이름</label>
             <input type="text" id="name" name="name" placeholder="이름을 입력하세요" required>
@@ -38,6 +38,7 @@
             <span id="emailError" class="error"></span>
 
             <button type="submit">가입 완료</button>
+            <button type="button" onclick="location.href='<%=request.getContextPath()%>/views/member/loginForm.jsp'">로그인 하러가기↗️</button>
         </form>
     </div>
 </body>

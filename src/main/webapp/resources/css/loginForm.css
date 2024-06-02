@@ -1,11 +1,8 @@
 body {
-    font-family: Arial, sans-serif;
-    background-color: #f7f7f7;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    height: 100vh;
     margin: 0;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
 }
 
 .container {
@@ -14,48 +11,49 @@ body {
     border-radius: 10px;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
     width: 400px;
+    margin: auto;
 }
 
-h1, h2 {
+h1 {
     text-align: center;
+    font-size: 24px;
+    margin-bottom: 50px;
 }
 
-form {
+.login-form {
     display: flex;
     flex-direction: column;
     align-items: center;
 }
 
-label {
-    margin-bottom: 9px;
-    width: 80%;
-}
-
-input {
+.login-form input[type="text"], .login-form input[type="password"] {
     margin-bottom: 15px;
     padding: 10px;
-    border: 1px solid #ccc;
+    border: 1px solid #ccc;  
     border-radius: 5px;
+    font-size: 14px;
     width: 80%;
 }
 
-button {
+.login-form .spacer {
+    margin-bottom: 50px;
+    
+}
+
+.login-form button {
 	width: 40%;
     padding: 10px;
     background-color: rgb(217, 201, 245);
-    color: black;
+    color: black; 
     border: none;
     border-radius: 5px;
-    margin-top: 20px;
     cursor: pointer;
-    align-items: center;
+    font-size: 16px;
+    margin-bottom: 15px; 
+    align-items: center; 
 }
 
-button:last-of-type {
-    margin-bottom: 25px; 
-}
-
-button:hover {
+.login-form button:hover {
     background-color: rgb(192, 178, 228); 
 }
 
@@ -63,9 +61,11 @@ button:hover {
     color: red;
     font-size: 0.9em;
     margin-bottom: 15px;
-    display: none;
 }
 
-.input-error {
-    border: 1px solid red;
+.main-content {
+    flex: 1;
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
