@@ -8,8 +8,20 @@
 <body>
     <div class="box">
         <div class="top">
-            <span><a href="<%=request.getContextPath()%>/views/member/loginForm.jsp">로그인</a></span>
-            <span><a href="<%=request.getContextPath()%>/views/member/signUpForm.jsp">회원가입</a></span>
+            <% 
+                String username = (String) session.getAttribute("username");
+                if (username != null) {
+            %>
+                <span><%= username %>님 환영합니다</span>
+                <span><a href="<%=request.getContextPath()%>/views/member/logout.jsp">로그아웃</a></span>
+            <% 
+                } else {
+            %>
+                <span><a href="<%=request.getContextPath()%>/views/member/loginForm.jsp">로그인</a></span>
+                <span><a href="<%=request.getContextPath()%>/views/member/signUpForm.jsp">회원가입</a></span>
+            <% 
+                }
+            %>
             <span><a href="cart.jsp">장바구니</a></span>
             <span><a href="delevery.jsp">주문배송</a></span>        
         </div>
