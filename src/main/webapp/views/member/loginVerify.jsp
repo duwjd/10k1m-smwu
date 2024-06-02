@@ -45,7 +45,7 @@ try {
                 session.setAttribute("username", username);
                 response.sendRedirect("../main.jsp");
             } else {
-                request.setAttribute("errorMessage", "유효하지 않은 아이디 또는 비밀번호입니다.");
+                request.setAttribute("errorMessage", "아이디 또는 비밀번호가 틀렸습니다. 다시 입력해주세요.");
                 request.getRequestDispatcher("loginForm.jsp").forward(request, response);
             }
         }
