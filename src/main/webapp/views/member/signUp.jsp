@@ -1,0 +1,86 @@
+<%@ page language="java" contentType="text/html; charset=UTF-8"
+    pageEncoding="UTF-8" import="java.sql.*, java.util.*, java.io.*"%>
+<%
+request.setCharacterEncoding("UTF-8");  // 폼 데이터 인코딩 설정
+
+String propFilePath = application.getRealPath("/WEB-INF/db.properties");
+Properties props = new Properties();
+try {
+    FileInputStream fis = new FileInputStream(propFilePath);
+    props.load(fis);
+    fis.close();
+} catch (Exception e) {
+    e.printStackTrace();
+    response.sendRedirect("../views/member/signupForm.jsp?error=설정 파일 읽기 실패");
+    return;
+}
+
+String driver = props.getProperty("driver");
+String url = props.getProperty("url");
+String user = props.getProperty("user");
+String dbPassword = props.getProperty("password");
+
+String name = request.getParameter("name");
+String username = request.getParameter("username");
+String password = request.getParameter("password");
+String address = request.getParameter("address");
+String phoneNumber = request.getParameter("phone_number");
+String email = request.getParameter("email");
+String message = "";
+
+if (name != null && username != null && password != null && address != null && phoneNumber != null && email != null) {
+    Connection conn = null;
+    CallableStatement stmt = null;
+
+    try {
+        Class.forName(driver);
+        conn = DriverManager.getConnection(url, user, dbPassword);
+
+        String sql = "{call sign_up_member(?, ?, ?, ?, ?, ?)}";
+        stmt = conn.prepareCall(sql);
+        stmt.setString(1, name);
+        stmt.setString(2, username);
+        stmt.setString(3, password);
+        stmt.setString(4, phoneNumber);
+        stmt.setString(5, email);
+        stmt.setString(6, address);
+
+        stmt.execute();
+        message = "회원 가입이 성공적으로 완료되었습니다!";
+    } catch (Exception e) {
+        e.printStackTrace();
+        message = "회원 가입 중 오류가 발생했습니다. 다시 시도해주세요.";
+    } finally {
+        try {
+            if (stmt != null) stmt.close();
+            if (conn != null) conn.close();
+        } catch (Exception e) {
+            e.printStackTrace();
+        }
+    }
+} else {
+    message = "모든 필드를 입력해야 합니다.";
+}
+%>
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="UTF-8">
+<title>회원 가입 처리</title>
+<script>
+    function showAlertAndRedirect(message, redirectUrl) {
+        alert(message);
+        window.location.href = redirectUrl;
+    }
+</script>
+</head>
+<body>
+    <script>
+        <% if ("회원 가입이 성공적으로 완료되었습니다!".equals(message)) { %>
+            showAlertAndRedirect("<%= message %>", "<%= request.getContextPath() %>/views/main.jsp");
+        <% } else { %>
+            showAlertAndRedirect("<%= message %>", "<%= request.getContextPath() %>/views/member/signupForm.jsp");
+        <% } %>
+    </script>
+</body>
+</html>

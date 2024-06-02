@@ -1,0 +1,54 @@
+<html>
+<head>
+<meta charset="UTF-8">
+<link href="search_result.css" rel="stylesheet" type="text/css">
+<link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@100;300;400;500;700;900&display=swap" rel="stylesheet">
+</head>
+<body>
+  <div class="filter_box">
+    <table>
+      <tr>
+        <td class="cat">카테고리</td>
+        <td class="catd">
+          <div class="select">
+            <input type="radio" id="select" name="shop"><label for="select">메이크업</label>
+            <input type="radio" id="select2" name="shop"><label for="select2">스킨케어</label>
+            <input type="radio" id="select3" name="shop"><label for="select3">마스크팩</label>
+            <input type="radio" id="select4" name="shop"><label for="select4">클렌징</label>
+            <input type="radio" id="select5" name="shop"><label for="select5">선케어</label>
+            <input type="radio" id="select6" name="shop"><label for="select6">헤어케어</label>
+            <input type="radio" id="select7" name="shop"><label for="select7">바디케어</label>
+            <input type="radio" id="select8" name="shop"><label for="select8">미용소품</label>
+            <input type="radio" id="select9" name="shop"><label for="select9">건강식품</label>
+            <input type="radio" id="select10" name="shop"><label for="select10">푸드</label>
+            <input type="radio" id="select11" name="shop"><label for="select11">구강용품</label>
+            <input type="radio" id="select12" name="shop"><label for="select12">헬스/건강용품</label>
+
+       </div>
+        </td>
+      </tr>
+    </table>
+  </div>
+  <div id="headers"></div>
+    <div class = "header">
+      <span id="title">'검색어'에 대한 검색 결과</span>
+      <span id="option">상품명순</span>
+      <span id="option">높은 가격순</span>
+      <span id="option">낮은 가격순</span>
+      <hr class="division">
+  </div>
+
+  <div id="product_list">
+    <div class="product_card"><a href="product_detail.html">
+      <div id="imgbox">
+        <img class="product_img" src = "product_img.png">
+      </div>
+      <div class = "product_contents">
+        <span class="product_name">상품1</span>
+        <span class="product_price">10,000원</span>
+      </div>
+    </a>
+    </div>
+  </div>  
+</body>
+</html>
