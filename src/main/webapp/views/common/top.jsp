@@ -1,0 +1,59 @@
+<%@ page language="java" contentType="text/html; charset=UTF-8" pageEncoding="UTF-8"%>
+<html>
+<head>
+<meta charset="UTF-8">
+<link href="top.css" rel="stylesheet" type="text/css">
+<link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@100;300;400;500;700;900&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div class="box">
+        <div class="top">
+            <span><a href="<%=request.getContextPath()%>/views/member/loginForm.jsp">로그인</a></span>
+            <span><a href="<%=request.getContextPath()%>/views/member/signUpForm.jsp">회원가입</a></span>
+            <span><a href="cart.jsp">장바구니</a></span>
+            <span><a href="delevery.jsp">주문배송</a></span>        
+        </div>
+        <div class= "second">
+            <div class="logo">
+                <img src="logo.png" alt="올리브영 로고">
+            </div>
+            <div class="search">
+                <form class="d-flex" role="search">
+                    <input class="input" type="search" placeholder="제품명을 입력하여 검색하기" aria-label="Search">
+                    <button class="searchButton" type="submit">검색</button>
+                </form>
+            </div>
+        </div>
+        
+        <div class="category">
+            <div class="dropdown">
+                <button class="dropbtn"> 
+                    <span class="dropbtn_icon">뷰티</span>
+                </button>
+                <div class="dropdown-content">
+                    <a href="#">메이크업</a>
+                    <a href="#">스킨케어</a>
+                    <a href="#">마스크팩</a>
+                    <a href="#">클렌징</a>
+                    <a href="#">선케어</a>
+                    <a href="#">헤어케어</a>
+                    <a href="#">바디케어</a>
+                    <a href="#">미용소품</a>
+                </div>
+            </div>
+            <div class="dropdown">
+                <button class="dropbtn"> 
+                    <span class="dropbtn_icon">헬스&푸드</span>
+                </button>
+                <div class="dropdown-content">
+                    <a href="#">건강식품</a>
+                    <a href="#">푸드</a>
+                    <a href="#">구강용품</a>
+                    <a href="#">헬스/건강용품</a>
+                </div>
+            </div>
+        </div>
+        <div class="line"></div>
+    </div>
+</body>
+</html>
