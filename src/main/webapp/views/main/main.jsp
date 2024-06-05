@@ -1,6 +1,6 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8" 
 	pageEncoding="UTF-8" import="java.sql.*, java.util.*, java.io.*" %>
-<%@ include file="./common/top.jsp" %>
+<%@ include file="../common/top.jsp" %>
 <%
 String propFilePath = application.getRealPath("/WEB-INF/db.properties");
 Properties props = new Properties();
