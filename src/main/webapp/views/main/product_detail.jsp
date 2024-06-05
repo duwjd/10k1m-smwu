@@ -1,10 +1,14 @@
+<%@ page language="java" contentType="text/html; charset=UTF-8" pageEncoding="UTF-8" import="java.sql.*, java.util.*, java.io.*, java.math.BigDecimal, oracle.jdbc.*, oracle.sql.*" %>
+<%@ include file="../common/top.jsp" %>
+<%@ include file="/WEB-INF/includes/dbConnection.jsp" %>
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>상품명</title>
-    <link rel="stylesheet" href="product_detail.css">
+    <link rel="stylesheet" type="text/css" href="<%=request.getContextPath()%>/resources/css/product_detail.css">
 </head>
 <body>
     <div class="product_container">
