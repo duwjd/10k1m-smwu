@@ -1,49 +1,31 @@
-<%@ page language="java" contentType="text/html; charset=UTF-8"
-    pageEncoding="UTF-8" import="java.sql.*, java.util.*, java.io.*"%>
+<%@ page language="java" contentType="text/html; charset=UTF-8" pageEncoding="UTF-8" import="java.sql.*, java.util.*, java.io.*"%>
+<%@ include file="/WEB-INF/includes/dbConnection.jsp" %>
 <%
 request.setCharacterEncoding("UTF-8");  // 폼 데이터 인코딩 설정
-
-String propFilePath = application.getRealPath("/WEB-INF/db.properties");
-Properties props = new Properties();
-try {
-    FileInputStream fis = new FileInputStream(propFilePath);
-    props.load(fis);
-    fis.close();
-} catch (Exception e) {
-    e.printStackTrace();
-    response.sendRedirect("../views/member/signupForm.jsp?error=설정 파일 읽기 실패");
-    return;
-}
-
-String driver = props.getProperty("driver");
-String url = props.getProperty("url");
-String user = props.getProperty("user");
-String dbPassword = props.getProperty("password");
+response.setContentType("text/html; charset=UTF-8");
 
 String name = request.getParameter("name");
 String username = request.getParameter("username");
 String password = request.getParameter("password");
-String address = request.getParameter("address");
 String phoneNumber = request.getParameter("phone_number");
 String email = request.getParameter("email");
 String message = "";
 
-if (name != null && username != null && password != null && address != null && phoneNumber != null && email != null) {
+if (name != null && username != null && password != null && phoneNumber != null && email != null) {
     Connection conn = null;
     CallableStatement stmt = null;
 
     try {
-        Class.forName(driver);
-        conn = DriverManager.getConnection(url, user, dbPassword);
+        // 데이터베이스 연결
+        conn = DriverManager.getConnection(dbUrl, dbUser, dbPassword);
 
-        String sql = "{call sign_up_member(?, ?, ?, ?, ?, ?)}";
+        String sql = "{call sign_up_member(?, ?, ?, ?, ?)}";
         stmt = conn.prepareCall(sql);
         stmt.setString(1, name);
         stmt.setString(2, username);
         stmt.setString(3, password);
         stmt.setString(4, phoneNumber);
         stmt.setString(5, email);
-        stmt.setString(6, address);
 
         stmt.execute();
         message = "회원 가입이 성공적으로 완료되었습니다!";
