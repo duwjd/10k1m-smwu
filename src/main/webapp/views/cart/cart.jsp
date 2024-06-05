@@ -10,6 +10,19 @@ if (memberId == null) {
     response.sendRedirect("../member/loginForm.jsp");
     return;
 }
+
+Connection conn = null;
+CallableStatement stmt = null;
+ResultSet rs = null;
+
+try {
+    conn = DriverManager.getConnection(dbUrl, dbUser, dbPassword);
+    stmt = conn.prepareCall("{call view_cart(?)}");
+    stmt.setBigDecimal(1, memberId);
+    
+    boolean hasResults = stmt.execute();
+    if (hasResults) {
+        rs = stmt.getResultSet();
 %>
 <!DOCTYPE html>
 <html>
@@ -41,18 +54,25 @@ if (memberId == null) {
                     </tr>
                 </thead>
                 <tbody>
+                    <%
+                    while (rs.next()) {
+                        String productName = rs.getString("product_name");
+                        String productDescription = rs.getString("product_description");
+                        int cartQuantity = rs.getInt("cart_quantity");
+                        String imageUrl = request.getContextPath() + "/resources/images/" + productName + ".jpg"; // Assuming image names are product names
+                    %>
                     <tr>
-                        <td><input type="checkbox" name="select_item" value="sample1"></td>
+                        <td><input type="checkbox" name="select_item" value="<%= productName %>"></td>
                         <td class="cart-product-info">
-                            <img src="<%= request.getContextPath() %>/resources/images/food1.jpg" alt="Sample Product 1">
+                            <img src="<%= imageUrl %>" alt="<%= productName %>">
                             <div>
-                                <p class="cart-product-name">상품명</p>
-                                <p class="cart-product-description">상품 설명</p>
+                                <p class="cart-product-name"><%= productName %></p>
+                                <p class="cart-product-description"><%= productDescription %></p>
                             </div>
                         </td>
-                        <td>25,000원</td>
+                        <td><%= String.format("%,d원", rs.getInt("product_price")) %></td>
                         <td>
-                            <input type="number" name="quantity" value="1" min="1" class="cart-quantity-input">
+                            <input type="number" name="quantity" value="<%= cartQuantity %>" min="1" class="cart-quantity-input">
                         </td>
                         <td>
                             <div class="cart-actions-column">
@@ -62,27 +82,7 @@ if (memberId == null) {
                             </div>
                         </td>
                     </tr>
-                    <tr>
-                        <td><input type="checkbox" name="select_item" value="sample2"></td>
-                        <td class="cart-product-info">
-                            <img src="<%= request.getContextPath() %>/resources/images/health1.jpg" alt="Sample Product 2">
-                            <div>
-                                <p class="cart-product-name">상품명</p>
-                                <p class="cart-product-description">상품 설명</p>
-                            </div>
-                        </td>
-                        <td>20,000원</td>
-                        <td>
-                            <input type="number" name="quantity" value="1" min="1" class="cart-quantity-input">
-                        </td>
-                        <td>
-                            <div class="cart-actions-column">
-                                <button class="cart-action-button buy">바로구매</button>
-                                <button class="cart-action-button like">좋아요</button>
-                                <button class="cart-action-button delete">삭제</button>
-                            </div>
-                        </td>
-                    </tr>
+                    <% } %>
                 </tbody>
             </table>
         </div>
@@ -123,4 +123,29 @@ if (memberId == null) {
     </div>
 </body>
 </html>
-
+<%
+    } else {
+%>
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>Shopping Cart</title>
+    <link rel="stylesheet" type="text/css" href="<%= request.getContextPath() %>/resources/css/cart.css">
+</head>
+<body>
+    <div class="cart-main-content">
+        <p>No items found in cart.</p>
+    </div>
+</body>
+</html>
+<%
+    }
+} catch (SQLException e) {
+    e.printStackTrace();
+} finally {
+    if (rs != null) try { rs.close(); } catch (SQLException ignore) {}
+    if (stmt != null) try { stmt.close(); } catch (SQLException ignore) {}
+    if (conn != null) try { conn.close(); } catch (SQLException ignore) {}
+}
+%>
