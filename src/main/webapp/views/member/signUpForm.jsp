@@ -27,14 +27,12 @@
             <label for="password">비밀번호</label>
             <input type="password" id="password" name="password" placeholder="6자리 이상의 비밀번호를 입력하세요" required>
 
-            <label for="address">주소</label>
-            <input type="text" id="address" name="address" placeholder="도로명 주소를 입력하세요" required>
-
             <label for="phone_number">휴대폰 번호</label>
             <input type="text" id="phone_number" name="phone_number" placeholder="010-1234-5678" required>
+            <span id="phoneNumberError" class="error"></span>
 
             <label for="email">이메일</label>
-            <input type="email" id="email" name="email" placeholder="drugstore@gmail.com" required>
+            <input type="email" id="email" name="email" placeholder="PickupStore@gmail.com" required>
             <span id="emailError" class="error"></span>
 
             <button type="submit">가입 완료</button>
