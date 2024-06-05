@@ -1,7 +1,6 @@
 /* cart.css */
 body {
     font-family: 'Noto Sans KR', sans-serif;
-    background-color: #f8f8f8;
     margin: 0;
     padding: 0;
 }
@@ -69,7 +68,7 @@ body {
 
 .cart-table-container {
     border-radius: 20px;
-    overflow: hidden;
+    overflow-x: auto;
     margin-bottom: 30px;
 }
 
@@ -79,6 +78,7 @@ body {
     table-layout: fixed;
     border-radius: 20px;
     overflow: hidden;
+    min-width: 800px;
 }
 
 .cart-table th, .cart-table td {
