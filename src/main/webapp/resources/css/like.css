@@ -103,12 +103,10 @@ tr:last-child td {
 }
 
 .cart-btn {
-    background-color: #4CAF50;
-    color: white;
+    background-color: #B7DFB9;
 }
 
 .delete-btn {
-    background-color: #f44336;
-    color: white;
+    background-color: #EA9999;
     margin-left: 5px;
 }

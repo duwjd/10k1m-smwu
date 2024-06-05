@@ -1,19 +1,8 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8" 
 	pageEncoding="UTF-8" import="java.sql.*, java.util.*, java.io.*" %>
+
+<%@ include file="/WEB-INF/includes/dbConnection.jsp" %>
 <%@ include file="../common/top.jsp" %>
-<%
-String propFilePath = application.getRealPath("/WEB-INF/db.properties");
-Properties props = new Properties();
-try {
-    FileInputStream fis = new FileInputStream(propFilePath);
-    props.load(fis);
-    fis.close();
-} catch (Exception e) {
-    e.printStackTrace();
-    out.println("설정 파일 읽기 실패");
-    return;
-}
-%>
 <!DOCTYPE html>
 <html lang="ko">
 <head>
