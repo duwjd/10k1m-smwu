@@ -27,7 +27,9 @@
         </div>
         <div class= "second">
             <div class="logo">
-                <img src="<%=request.getContextPath()%>/resources/images/logo.png" alt="올리브영 로고">
+           		<a
+				href="<%=request.getContextPath()%>/views/main/main.jsp">
+                <img class = "page_logo" src="<%=request.getContextPath()%>/resources/images/logo.png" alt="올리브영 로고"></a>
             </div>
             <div class="search">
                 <form class="d-flex" role="search">

@@ -29,7 +29,7 @@ body {
   position:relative;
 }
 
-.logo > img{
+.logo > a > img {
     width : 200px;
     height : 100px;
     object-fit: contain;
