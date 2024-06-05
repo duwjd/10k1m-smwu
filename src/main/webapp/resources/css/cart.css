@@ -1,5 +1,7 @@
 .cart-main-content {
     padding: 20px;
+    max-width: 1320px; /* top.css와 동일하게 최대 너비를 1320px로 설정 */
+    margin: 0 auto; /* 중앙 정렬 */
 }
 
 .cart-header {

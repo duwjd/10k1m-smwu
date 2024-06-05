@@ -59,7 +59,7 @@ if (name != null && username != null && password != null && phoneNumber != null 
 <body>
     <script>
         <% if ("회원 가입이 성공적으로 완료되었습니다!".equals(message)) { %>
-            showAlertAndRedirect("<%= message %>", "<%= request.getContextPath() %>/views/main.jsp");
+            showAlertAndRedirect("<%= message %>", "<%= request.getContextPath() %>/views/main/main.jsp");
         <% } else { %>
             showAlertAndRedirect("<%= message %>", "<%= request.getContextPath() %>/views/member/signupForm.jsp");
         <% } %>
