@@ -27,7 +27,7 @@
         </div>
         <div class= "second">
             <div class="logo">
-                <img src="<%=request.getContextPath()%>/resources/images/drugstore_logo.png" alt="올리브영 로고">
+                <img src="<%=request.getContextPath()%>/resources/images/logo.png" alt="올리브영 로고">
             </div>
             <div class="search">
                 <form class="d-flex" role="search">
