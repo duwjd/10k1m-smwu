@@ -33,6 +33,7 @@ body {
 .order-status {
     display: flex;
     margin-bottom: 20px;
+    border-radius: 20px;
 }
 
 .order-status div {
@@ -51,7 +52,7 @@ body {
 .purchase-period {
     display: flex;
     align-items: center;
-    background-color: #f5f5f5;
+    background-color: rgb(217, 201, 245);
     border-radius: 20px;
     padding: 10px;
     margin-bottom: 20px;
@@ -75,7 +76,7 @@ body {
 .purchase-period .period-button {
     padding: 10px 20px;
     border: none;
-    background: #d4aaff;
+    background: rgb(217, 201, 245);
     cursor: pointer;
     margin-right: 10px;
     border-radius: 15px;
@@ -84,32 +85,33 @@ body {
     transition: background 0.3s, color 0.3s;
 }
 
-.purchase-period .period-button.active {
-    background: #b39ddb;
+.search-button {
+	background-color: white;
+	border: none;
+	border-radius: 20px;
+	cursor: pointer;
+	font-size: 14px;
+	margin: 10px 30px 10px auto;
+	padding: 10px 18px;
+    float: right;
 }
 
 
-.purchase-period .period-button:last-child {
-    margin-right: 0;
+.search-button:hover {
+background-color: rgb(192, 178, 228);
 }
 
-.purchase-period .search-button {
-    padding: 10px 20px;
-    border: none;
-    background: #666;
-    color: #fff;
-    cursor: pointer;
-    border-radius: 15px;
-    font-size: 14px;
-    margin-left: auto;
-    margin-right: 55px;
-    background-color: rgb(200, 150, 230);
+.period-button:hover {
+background-color: rgb(192, 178, 228);
 }
+
 
 table {
     width: 100%;
     border-collapse: collapse;
     margin-top: 20px;
+    border-radius: 20px;
+    overflow: hidden;
 }
 
 

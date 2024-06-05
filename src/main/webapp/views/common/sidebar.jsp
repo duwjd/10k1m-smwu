@@ -6,7 +6,7 @@
     <ul>
         <li class="main-item"><a href="#">마이쇼핑</a></li>
         <ul>
-            <li class="sub-item"><a href="<%=request.getContextPath()%>/views/member/myPage.jsp">주문/배송 조회</a></li>
+            <li class="sub-item"><a href="<%=request.getContextPath()%>/views/member/myPage.jsp">주문 조회</a></li>
             <li class="sub-item"><a href="<%=request.getContextPath()%>/views/member/cart.jsp">장바구니</a></li>
             <li class="sub-item"><a href="<%=request.getContextPath()%>/views/member/like.jsp">좋아요</a></li>
         </ul>
