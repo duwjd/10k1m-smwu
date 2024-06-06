@@ -1,4 +1,3 @@
-@ -0,0 +1,28 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8" pageEncoding="UTF-8" %>
 <%
 String propFilePath = application.getRealPath("/WEB-INF/db.properties");
