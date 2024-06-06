@@ -28,13 +28,55 @@
                     <td>상품명</td>
                     <td>1</td>
                     <td>10,000</td>
-                    <td><button class="review" onclick="location.href='#'" >리뷰 작성하기</button></td>
+                    <td><button id="openPopup" class="review" onclick="location.href='#'" >리뷰 작성하기</button></td>
                 </tr>
             </table>
+
+            <div id="myPopup" class="popup">
+                <div class="popup-content">
+                  <span class="close">&times;</span>
+                  <h2>리뷰 작성</h2>
+                  <textarea class="input" rows="5" placeholder="리뷰를 입력해주세요."></textarea>
+                  <div style="text-align: right; margin-top: 10px;">
+                    <button id="submitReview">리뷰 등록</button>
+                    <button id="cancelReview">취소</button>
+                  </div>
+                </div>
+              </div>
 
            <!-- 추가 주문 상품 항목 -->
             <button class="list" onclick="location.href='#'">목록</button>
         </div>
     </div>
+
+    <script>
+        var popup = document.getElementById("myPopup");
+        var openPopupBtn = document.getElementById("openPopup");
+        var closePopup = document.getElementsByClassName("close")[0];
+        var submitBtn = document.getElementById("submitReview");
+        var cancelBtn = document.getElementById("cancelReview");
+    
+        openPopupBtn.onclick = function() {
+          popup.style.display = "block";
+        }
+    
+        closePopup.onclick = function() {
+          popup.style.display = "none";
+        }
+    
+        submitBtn.onclick = function() {
+          popup.style.display = "none";
+        }
+    
+        cancelBtn.onclick = function() {
+          popup.style.display = "none";
+        }
+    
+        window.onclick = function(event) {
+          if (event.target == popup) {
+            popup.style.display = "none";
+          }
+        }
+      </script>
 </body>
 </html>
