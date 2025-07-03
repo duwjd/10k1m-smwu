@@ -1,0 +1,513 @@
+[
+  {
+    "timeFrame": {
+      "start": 0,
+      "end": 5000
+    },
+    "editorElements": [
+      {
+        "type": "image",
+        "placement": {
+          "x": 100,
+          "y": 400,
+          "width": 880,
+          "height": 500,
+          "scaleX": 1,
+          "scaleY": 1
+        },
+        "properties": {
+          "src": "sample.png"
+        },
+        "timeFrame": {
+          "start": 0,
+          "end": 5000
+        }
+      },
+      {
+        "type": "text",
+        "placement": {
+          "x": 880,
+          "y": 30,
+          "width": 150,
+          "height": 100,
+          "scaleX": 1,
+          "scaleY": 1
+        },
+        "properties": {
+          "text": "통합마케팅팀",
+          "fontSize": 24,
+          "fontWeight": 700,
+          "fontColor": "#007788",
+          "backgroundColor": "#e0f7fa",
+          "padding": 10
+        },
+        "timeFrame": {
+          "start": 0,
+          "end": 5000
+        }
+      },
+      {
+        "type": "text",
+        "placement": {
+          "x": 100,
+          "y": 100,
+          "width": 880,
+          "height": 100,
+          "scaleX": 1,
+          "scaleY": 1
+        },
+        "properties": {
+          "text": "아이폰16 Why KT",
+          "fontSize": 72,
+          "fontWeight": 900,
+          "fontColor": "#0000FF",
+          "textAlign": "center"
+        },
+        "timeFrame": {
+          "start": 0,
+          "end": 5000
+        }
+      }
+    ]
+  },
+  {
+    "timeFrame": {
+      "start": 5000,
+      "end": 10000
+    },
+    "editorElements": [
+      {
+        "type": "image",
+        "placement": {
+          "x": 100,
+          "y": 600,
+          "width": 880,
+          "height": 500,
+          "scaleX": 1,
+          "scaleY": 1
+        },
+        "properties": {
+          "src": "https://via.placeholder.com/880x500.png?text=Placeholder+Image+2"
+        },
+        "timeFrame": {
+          "start": 5000,
+          "end": 10000
+        }
+      },
+      {
+        "type": "text",
+        "placement": {
+          "x": 50,
+          "y": 250,
+          "width": 980,
+          "height": 100,
+          "scaleX": 1,
+          "scaleY": 1
+        },
+        "properties": {
+          "text": "아이폰 고객의 구매 결정 과정에 맞춰 고민을 해결해주는",
+          "fontSize": 50,
+          "fontWeight": 700,
+          "fontColor": "#0000FF",
+          "textAlign": "center",
+          "lineHeight": 1.4
+        },
+        "timeFrame": {
+          "start": 5000,
+          "end": 10000
+        }
+      },
+      {
+        "type": "text",
+        "placement": {
+          "x": 50,
+          "y": 320,
+          "width": 980,
+          "height": 100,
+          "scaleX": 1,
+          "scaleY": 1
+        },
+        "properties": {
+          "text": "'7대 차별화 무기'",
+          "fontSize": 55,
+          "fontWeight": 900,
+          "fontColor": "#0000FF",
+          "textAlign": "center",
+          "lineHeight": 1.4
+        },
+        "timeFrame": {
+          "start": 5000,
+          "end": 10000
+        }
+      }
+    ]
+  },
+  {
+    "timeFrame": {
+      "start": 10000,
+      "end": 15000
+    },
+    "editorElements": [
+      {
+        "type": "image",
+        "placement": {
+          "x": 100,
+          "y": 380,
+          "width": 200,
+          "height": 200,
+          "scaleX": 1,
+          "scaleY": 1
+        },
+        "properties": {
+          "src": "https://kr.object.ncloudstorage.com/story-content-prod/images/original/1_img_man_shrugging_light_blue.png"
+        },
+        "timeFrame": {
+          "start": 10100,
+          "end": 15000
+        }
+      },
+      {
+        "type": "text",
+        "placement": {
+          "x": 100,
+          "y": 600,
+          "width": 200,
+          "height": 100,
+          "scaleX": 1,
+          "scaleY": 1
+        },
+        "properties": {
+          "text": "너무 비싼데?",
+          "fontSize": 32,
+          "fontWeight": 700,
+          "fontColor": "#333333",
+          "textAlign": "center"
+        },
+        "timeFrame": {
+          "start": 10100,
+          "end": 15000
+        }
+      },
+      {
+        "type": "text",
+        "placement": {
+          "x": 450,
+          "y": 450,
+          "width": 580,
+          "height": 120,
+          "scaleX": 1,
+          "scaleY": 1
+        },
+        "properties": {
+          "text": "1 요금할인 혜택에 특별 캐시백/무이자할부까지, 'KT 제휴카드 할인'",
+          "fontSize": 34,
+          "fontWeight": 400,
+          "fontColor": "#333333",
+          "lineHeight": 1.6
+        },
+        "timeFrame": {
+          "start": 10200,
+          "end": 15000
+        }
+      },
+      {
+        "type": "text",
+        "placement": {
+          "x": 450,
+          "y": 600,
+          "width": 580,
+          "height": 120,
+          "scaleX": 1,
+          "scaleY": 1
+        },
+        "properties": {
+          "text": "2 전채널에서 활용 가능한 KT만의 '중고폰 매입 정책'",
+          "fontSize": 34,
+          "fontWeight": 400,
+          "fontColor": "#333333",
+          "lineHeight": 1.6
+        },
+        "timeFrame": {
+          "start": 10400,
+          "end": 15000
+        }
+      }
+    ]
+  },
+  {
+    "timeFrame": {
+      "start": 15000,
+      "end": 20000
+    },
+    "editorElements": [
+      {
+        "type": "image",
+        "placement": {
+          "x": 100,
+          "y": 380,
+          "width": 200,
+          "height": 200,
+          "scaleX": 1,
+          "scaleY": 1
+        },
+        "properties": {
+          "src": "https://kr.object.ncloudstorage.com/story-content-prod/images/original/1_img_woman_thinking_light_blue.png"
+        },
+        "timeFrame": {
+          "start": 15100,
+          "end": 20000
+        }
+      },
+      {
+        "type": "text",
+        "placement": {
+          "x": 50,
+          "y": 600,
+          "width": 300,
+          "height": 100,
+          "scaleX": 1,
+          "scaleY": 1
+        },
+        "properties": {
+          "text": "최신 애플 액세서리가",
+          "fontSize": 32,
+          "fontWeight": 700,
+          "fontColor": "#333333",
+          "textAlign": "center"
+        },
+        "timeFrame": {
+          "start": 15100,
+          "end": 20000
+        }
+      },
+      {
+        "type": "text",
+        "placement": {
+          "x": 50,
+          "y": 640,
+          "width": 300,
+          "height": 100,
+          "scaleX": 1,
+          "scaleY": 1
+        },
+        "properties": {
+          "text": "나온다던데?",
+          "fontSize": 32,
+          "fontWeight": 700,
+          "fontColor": "#333333",
+          "textAlign": "center"
+        },
+        "timeFrame": {
+          "start": 15100,
+          "end": 20000
+        }
+      },
+      {
+        "type": "text",
+        "placement": {
+          "x": 450,
+          "y": 450,
+          "width": 580,
+          "height": 120,
+          "scaleX": 1,
+          "scaleY": 1
+        },
+        "properties": {
+          "text": "3 에어팟프로2, 에어랩 등 인기 디바이스 득템, 'KT 디바이스 초이스'",
+          "fontSize": 34,
+          "fontWeight": 400,
+          "fontColor": "#333333",
+          "lineHeight": 1.6
+        },
+        "timeFrame": {
+          "start": 15200,
+          "end": 20000
+        }
+      },
+      {
+        "type": "text",
+        "placement": {
+          "x": 450,
+          "y": 600,
+          "width": 580,
+          "height": 120,
+          "scaleX": 1,
+          "scaleY": 1
+        },
+        "properties": {
+          "text": "4 최신 애플워치10도 월 2만원대로 득템 '스마트기기 요금할인'",
+          "fontSize": 34,
+          "fontWeight": 400,
+          "fontColor": "#333333",
+          "lineHeight": 1.6
+        },
+        "timeFrame": {
+          "start": 15400,
+          "end": 20000
+        }
+      }
+    ]
+  },
+  {
+    "timeFrame": {
+      "start": 20000,
+      "end": 25000
+    },
+    "editorElements": [
+      {
+        "type": "image",
+        "placement": {
+          "x": 100,
+          "y": 380,
+          "width": 200,
+          "height": 200,
+          "scaleX": 1,
+          "scaleY": 1
+        },
+        "properties": {
+          "src": "https://kr.object.ncloudstorage.com/story-content-prod/images/original/1_img_man_looking_out_light_blue.png"
+        },
+        "timeFrame": {
+          "start": 20100,
+          "end": 25000
+        }
+      },
+      {
+        "type": "text",
+        "placement": {
+          "x": 100,
+          "y": 600,
+          "width": 200,
+          "height": 100,
+          "scaleX": 1,
+          "scaleY": 1
+        },
+        "properties": {
+          "text": "뭐 더 주는 혜택은 없나?",
+          "fontSize": 32,
+          "fontWeight": 700,
+          "fontColor": "#333333",
+          "textAlign": "center"
+        },
+        "timeFrame": {
+          "start": 20100,
+          "end": 25000
+        }
+      },
+      {
+        "type": "text",
+        "placement": {
+          "x": 450,
+          "y": 500,
+          "width": 580,
+          "height": 150,
+          "scaleX": 1,
+          "scaleY": 1
+        },
+        "properties": {
+          "text": "5 KT 아이폰 15주년 기념, Y덤 고객을 위한 '아이폰16 구매 혜택'",
+          "fontSize": 34,
+          "fontWeight": 400,
+          "fontColor": "#333333",
+          "lineHeight": 1.6
+        },
+        "timeFrame": {
+          "start": 20200,
+          "end": 25000
+        }
+      }
+    ]
+  },
+  {
+    "timeFrame": {
+      "start": 25000,
+      "end": 30000
+    },
+    "editorElements": [
+      {
+        "type": "image",
+        "placement": {
+          "x": 100,
+          "y": 380,
+          "width": 200,
+          "height": 200,
+          "scaleX": 1,
+          "scaleY": 1
+        },
+        "properties": {
+          "src": "https://kr.object.ncloudstorage.com/story-content-prod/images/original/1_img_woman_pondering_light_blue.png"
+        },
+        "timeFrame": {
+          "start": 25100,
+          "end": 30000
+        }
+      },
+      {
+        "type": "text",
+        "placement": {
+          "x": 100,
+          "y": 600,
+          "width": 200,
+          "height": 100,
+          "scaleX": 1,
+          "scaleY": 1
+        },
+        "properties": {
+          "text": "안심하고 쓸 수 있을까?",
+          "fontSize": 32,
+          "fontWeight": 700,
+          "fontColor": "#333333",
+          "textAlign": "center"
+        },
+        "timeFrame": {
+          "start": 25100,
+          "end": 30000
+        }
+      },
+      {
+        "type": "text",
+        "placement": {
+          "x": 450,
+          "y": 450,
+          "width": 580,
+          "height": 120,
+          "scaleX": 1,
+          "scaleY": 1
+        },
+        "properties": {
+          "text": "6 초이스 혜택으로 365폰케어를 추가 부담 없이, '폰케어 초이스'",
+          "fontSize": 34,
+          "fontWeight": 400,
+          "fontColor": "#333333",
+          "lineHeight": 1.6
+        },
+        "timeFrame": {
+          "start": 25200,
+          "end": 30000
+        }
+      },
+      {
+        "type": "text",
+        "placement": {
+          "x": 450,
+          "y": 600,
+          "width": 580,
+          "height": 120,
+          "scaleX": 1,
+          "scaleY": 1
+        },
+        "properties": {
+          "text": "7 별도 앱 없이 최다 500만 DB로 알려주는, '후후 스팸알림'",
+          "fontSize": 34,
+          "fontWeight": 400,
+          "fontColor": "#333333",
+          "lineHeight": 1.6
+        },
+        "timeFrame": {
+          "start": 25400,
+          "end": 30000
+        }
+      }
+    ]
+  }
+]
