@@ -25,14 +25,14 @@ except ImportError as e:
 
 # Streamlit 페이지 설정
 st.set_page_config(
-    page_title="Enhanced PDF to JSON Converter",
+    page_title="PDF to JSON Converter",
     page_icon="🎨",
     layout="wide",
     initial_sidebar_state="expanded"
 )
 
 def main():
-    st.title("🎨 Enhanced PDF to JSON Converter")
+    st.title("🎨 PDF to JSON Converter")
     st.markdown("### AI 기반 PDF → JSON 템플릿 변환기")
     
     # 사이드바
