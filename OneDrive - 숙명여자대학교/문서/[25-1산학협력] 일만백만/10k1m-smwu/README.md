@@ -1,4 +1,4 @@
-# Enhanced PDF to JSON Converter
+# PDF to JSON Converter
 
 🎨 AI 기반 PDF → JSON 템플릿 변환기
 
@@ -32,13 +32,6 @@ python scripts/run_processor.py data/input/your_file.pdf
 python scripts/run_streamlit.py
 ```
 
-## 🎯 주요 기능
-
-- 🖼️ 고해상도 이미지 추출
-- 📝 향상된 OCR 텍스트 추출  
-- 🎨 색상 자동 추출
-- 🎬 시각적 Scene 렌더링
-- 📊 JSON 템플릿 자동 생성
 
 ## 📁 프로젝트 구조
 
